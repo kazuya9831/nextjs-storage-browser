@@ -1,9 +1,9 @@
 import { defineStorage } from "@aws-amplify/backend";
 
 export const storage = defineStorage({
-  name: "storage-browser-test",
+  name: "fk-test-storage-web-s3",
   access: (allow: any) => ({
-    'media-readwritedelete/*': [allow.authenticated.to(['read', 'write', 'delete'])],
+    'media-readwritedelete/*': [allow.authenticated.to(['read', 'write', 'delete'])],　
     'media-readonly/*': [allow.authenticated.to(['read'])],
     'shared-folder-readwrite/*': [
       allow.authenticated.to(['read', 'write'])
